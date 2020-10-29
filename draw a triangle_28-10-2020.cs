@@ -22,22 +22,25 @@ namespace test
             Console.WriteLine("Draw a northeast triangle. Insert a number (x) for the width.");
 
             string x = "*";
-            int width = Convert.ToInt32(Console.ReadLine());
-            int height = width;
+            int height = Convert.ToInt32(Console.ReadLine());
+            int width = 0;
+            int max = height;
 
             for (int row = 0; row < height; row++)
             {
+
+                for (int symb = 0; symb < max; symb++)
+                {
+                    Console.Write(x);
+                }
                 for (int column = 0; column < width; column++)
                 {
                     Console.Write(" ");
                 }
-                for (int space = 0; space < height; space++)
-                {
-                    Console.Write(x);
-                }
 
                 Console.WriteLine();
-                width--;
+                max--;
+                width++;
             }
             Console.ReadLine();
         }
